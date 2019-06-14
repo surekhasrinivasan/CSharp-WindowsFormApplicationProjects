@@ -19,7 +19,7 @@ namespace AsciiAndHexadecimalConverter
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -31,7 +31,13 @@ namespace AsciiAndHexadecimalConverter
 
         private void button1_Click(object sender, EventArgs e)
         {
+            textBox3.Text = ToHexString(textBox1.Text);
+        }
 
+        public static string ToHexString(string asciiStr)
+        {
+            string result = String.Concat(asciiStr.Select(x => ((int)x).ToString("X")));
+            return result;
         }
     }
 }
