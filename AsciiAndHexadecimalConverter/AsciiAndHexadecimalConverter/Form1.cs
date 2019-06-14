@@ -32,8 +32,9 @@ namespace AsciiAndHexadecimalConverter
         private void button1_Click(object sender, EventArgs e)
         {
             textBox3.Text = ToHexString(textBox1.Text);
+            textBox2.Text = FromHexString(ToHexString(textBox1.Text));
         }
-
+        
         public static string ToHexString(string asciiStr)
         {
             string result = String.Concat(asciiStr.Select(x => ((int)x).ToString("X")));
