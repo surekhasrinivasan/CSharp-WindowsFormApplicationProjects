@@ -24,6 +24,13 @@ namespace AsciiAndHexadecimalConverter
 
         private void button2_Click(object sender, EventArgs e)
         {
+            textBox1.Text = "";
+            textBox2.Text = "";
+            textBox3.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     }
