@@ -39,5 +39,16 @@ namespace AsciiAndHexadecimalConverter
             string result = String.Concat(asciiStr.Select(x => ((int)x).ToString("X")));
             return result;
         }
+
+        public static string FromHexString(string hexStr)
+        {
+            StringBuilder sb = new StringBuilder();
+            for (var i = 0; i < hexStr.Length; i += 2)
+            {
+                var hexChar = hexStr.Substring(i, 2);
+                sb.Append((char)Convert.ToByte(hexChar, 16));
+            }
+            return sb.ToString();
+        }
     }
 }
